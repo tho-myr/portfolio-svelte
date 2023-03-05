@@ -13,13 +13,14 @@
 </script>
 
 <main>
+    <div id="blur-blob"></div>
     <div id="blob"></div>
 </main>
 
 <style>
     #blob {
-        height: 500px;
-        width: 500px;
+        height: 400px;
+        width: 400px;
         aspect-ratio: 1;
         position: absolute;
         left: 50%;
@@ -47,4 +48,13 @@
             rotate: 360deg;
         }
     }
+
+    #blur-blob {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: 2;
+        backdrop-filter: blur(140px);
+    }
+
 </style>
