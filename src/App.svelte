@@ -21,5 +21,9 @@
         width: 500px;
         aspect-ratio: 1;
         position: absolute;
+        left: 50%;
+        right: 50%;
+        translate: -50% -50%;
+        border-radius: 50%;
     }
 </style>
