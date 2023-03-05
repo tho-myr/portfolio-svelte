@@ -5,4 +5,6 @@ const app = new App({
   target: document.getElementById('app'),
 })
 
+export const blob = document.getElementById("blob");
+
 export default app
