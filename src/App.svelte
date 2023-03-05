@@ -4,8 +4,10 @@
     document.body.onpointermove = event => {
         const {clientX, clientY} = event;
 
-        blob.style.left = `${clientX}px`;
-        blob.style.top = `${clientY}px`;
+        blob.animate({
+            left: `${clientX}px`,
+            top: `${clientY}px`,
+        }, {duration: 3000, fill: "forwards"});
     }
 
 </script>
@@ -21,7 +23,7 @@
         aspect-ratio: 1;
         position: absolute;
         left: 50%;
-        right: 50%;
+        top: 50%;
         translate: -50% -50%;
         border-radius: 50%;
 
