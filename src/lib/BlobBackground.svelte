@@ -17,11 +17,30 @@
 </main>
 
 <style>
+    @media only screen and (max-width: 700px) {
+        #blob {
+            max-height: 200px;
+            max-width: 200px;
+        }
+        #blur-blob {
+            backdrop-filter: blur(70px);
+        }
+    }
+    @media only screen and (min-width: 700px) {
+        #blob {
+            max-height: 400px;
+            max-width: 400px;
+        }
+        #blur-blob {
+            backdrop-filter: blur(140px);
+        }
+    }
+
     #blob {
         height: 400px;
         width: 400px;
         aspect-ratio: 1;
-        position: absolute;
+        position: fixed;
         left: 50%;
         top: 50%;
         translate: -50% -50%;
@@ -51,7 +70,6 @@
         width: 100%;
         position: absolute;
         z-index: 2;
-        backdrop-filter: blur(140px);
     }
 
 </style>
