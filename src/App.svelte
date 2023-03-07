@@ -1,9 +1,9 @@
 <script>
     import BlobBackground from "./lib/BlobBackground.svelte";
-    import Main from "./lib/Main.svelte";
+    import Home from "./lib/Home.svelte";
 </script>
 
 <main>
-    <Main/>
+    <Home/>
     <BlobBackground/>
 </main>
