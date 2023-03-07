@@ -12,7 +12,6 @@
 </script>
 
 <main>
-    <div id="blur-blob"></div>
     <div id="blob"></div>
 </main>
 
@@ -21,18 +20,22 @@
         #blob {
             max-height: 200px;
             max-width: 200px;
-        }
-        #blur-blob {
-            backdrop-filter: blur(70px);
+            -webkit-filter: blur(70px);
+            -moz-filter: blur(70px);
+            -o-filter: blur(70px);
+            -ms-filter: blur(70px);
+            filter: blur(70px);
         }
     }
     @media only screen and (min-width: 700px) {
         #blob {
-            max-height: 400px;
-            max-width: 400px;
-        }
-        #blur-blob {
-            backdrop-filter: blur(140px);
+            max-height: 300px;
+            max-width: 300px;
+            -webkit-filter: blur(110px);
+            -moz-filter: blur(110px);
+            -o-filter: blur(110px);
+            -ms-filter: blur(110px);
+            filter: blur(110px);
         }
     }
 
@@ -51,6 +54,7 @@
                 rebeccapurple
         );
         animation: rotate 20s infinite;
+        z-index: -1;
     }
 
     @keyframes rotate {
@@ -58,18 +62,11 @@
             rotate: 0deg;
         }
         50% {
-            scale: 1 1.5;
+            scale: 1 1.3;
         }
         to {
             rotate: 360deg;
         }
-    }
-
-    #blur-blob {
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        z-index: 2;
     }
 
 </style>
