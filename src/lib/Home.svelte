@@ -14,6 +14,7 @@
         position: fixed;
         text-align: center;
         display: block;
+        z-index: 3;
     }
 
     .headline {
