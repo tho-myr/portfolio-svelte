@@ -18,7 +18,7 @@
 
     .headline {
         font-size: min(5.5vw, 70px);
-        font-weight: bolder;
+        font-weight: 800;
     }
     #textOne {
         animation: flyInRight 3s;
