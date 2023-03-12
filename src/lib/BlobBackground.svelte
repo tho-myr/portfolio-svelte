@@ -44,7 +44,7 @@
         border-radius: 50%;
         background: white linear-gradient(to right, aquamarine, rebeccapurple);
         animation: rotate 20s infinite;
-        z-index: 1;
+        z-index: 0;
     }
 
     @keyframes rotate {
@@ -63,7 +63,7 @@
         height: 100%;
         width: 100%;
         position: absolute;
-        z-index: 2;
+        z-index: 1;
     }
 
     /* using chrome etc */
