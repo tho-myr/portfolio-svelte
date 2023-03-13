@@ -4,8 +4,10 @@
 
     var starBackground;
 
+    var amountStars = 70;
+
     var minHeight = 70;
-    var maxHeight = 170;
+    var maxHeight = 250;
 
     var minAnimationSpeed = 30;
     var maxAnimationSpeed = 50;
@@ -15,7 +17,7 @@
 
     onMount(() => {
         starBackground = document.getElementById("starBackground");
-        for (let i = 0; i < 100; i++) {
+        for (let i = 0; i < amountStars; i++) {
             createStar(i);
         }
     });
