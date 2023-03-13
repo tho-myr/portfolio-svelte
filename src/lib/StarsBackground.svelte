@@ -62,7 +62,7 @@
                 transform: translateY(100vh);
             }
             to {
-                transform: translateY(-100vh);
+                transform: translateY(-150vh);
             }
         }
 
