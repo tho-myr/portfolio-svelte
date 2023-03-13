@@ -4,7 +4,7 @@
 
     var starBackground;
 
-    var amountStars = 70;
+    var amountStars = window.innerWidth / 20;
 
     var minHeight = 70;
     var maxHeight = 250;
@@ -116,5 +116,4 @@
         position: absolute;
         z-index: 2;
     }
-
 </style>
