@@ -4,8 +4,10 @@
 
     var starBackground;
 
+    var amountStars = 70;
+
     var minHeight = 70;
-    var maxHeight = 170;
+    var maxHeight = 250;
 
     var minAnimationSpeed = 30;
     var maxAnimationSpeed = 50;
@@ -15,7 +17,7 @@
 
     onMount(() => {
         starBackground = document.getElementById("starBackground");
-        for (let i = 0; i < 100; i++) {
+        for (let i = 0; i < amountStars; i++) {
             createStar(i);
         }
     });
@@ -23,7 +25,7 @@
     function createStar(index) {
         const id = "flyingStar" + index;
         const animationDelay = random(minAnimationDelay, maxAnimationDelay);
-        const speed = randomInt(minAnimationSpeed, maxAnimationSpeed);
+        const animationSpeed = randomInt(minAnimationSpeed, maxAnimationSpeed);
 
         var element = document.createElement("img");
         starBackground.appendChild(element);
@@ -36,7 +38,12 @@
         element.style.left = random(1, 99) + "%";
         element.style.top = random(1, 99) + "%";
 
-        const keyFrames = document.createElement("style");
+        const keyFrames = generateKeyframes(id, animationDelay, animationSpeed);
+        element.appendChild(keyFrames);
+    }
+
+    function generateKeyframes(id, animationDelay, animationSpeed) {
+        var keyFrames = document.createElement("style");
 
         keyFrames.innerHTML = `
         @keyframes pulsate {
@@ -57,17 +64,18 @@
                 transform: translateY(100vh);
             }
             to {
-                transform: translateY(-100vh);
+                transform: translateY(-150vh);
             }
         }
 
         #${id} {
-            animation: pulsate 8s infinite, move ${speed}s linear infinite;
+            animation: pulsate 8s infinite, move ${animationSpeed}s linear infinite;
             animation-delay: ${animationDelay}s;
             visibility: hidden;
         }
         `;
-        element.appendChild(keyFrames);
+
+        return keyFrames;
     }
 
     function random(min, max) {
